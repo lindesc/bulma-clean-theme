@@ -5,11 +5,8 @@ layout: default
 {{ content }}
 
 <div class="columns is-multiline">
-    <div class="column is-12">
-        {% include pagination.html %}
-    </div>
     {% for post in paginator.posts %}
-    <div class="column is-12">
+    <div class="column is-4">
         {% include post-card.html %}
     </div>
     {% endfor %}
