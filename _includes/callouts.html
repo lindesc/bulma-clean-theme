@@ -9,12 +9,14 @@
                             {% if callout.icon %}
                             <div class="icon callout-icon">
                             {% if callout.icon_brand %}
-                                <i class="fab {{ callout.icon }} fa-4x"></i>
-                            {% if callout.image %}
-                                <img src="{{callout.image}}" alt="icon">
+                                <i class="fab {{ callout.icon }} fa-4x"></i>                           
                             {% else %}
                                 <i class="fas {{ callout.icon }} fa-4x"></i>
                             {% endif %}
+                            </div>
+                            {% elsif callout.image %}
+                            <div class="callout-image">
+                                <img src="{{callout.image}}" alt="{{callout.title}}">
                             </div>
                             {% endif %}
                             <p class="title is-5">{{ callout.title }}</p>
